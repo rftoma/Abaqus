@@ -2887,15 +2887,14 @@ S_PIER, RP_F_CNS__CNS_
 *Surface Interaction, name=NormalTangent
 1.,
 *Friction, slip tolerance=0.005, taumax=5.
- 0.5,
-*Surface Behavior, pressure-overclosure=LINEAR
-90000., 
+ 0.85,
+*Surface Behavior, pressure-overclosure=HARD
 ** 
 ** INTERACTIONS
 ** 
-** Interaction: NormalTang
-*Contact Pair, interaction=NormalTangent, type=SURFACE TO SURFACE
-SOIL-1.BASE_SOIL, FND-1.BOT_F
+** Interaction: Cohesive
+*Contact Pair, interaction=Cohesive, small sliding, type=SURFACE TO SURFACE
+SOIL-1.BASE_SOIL, m_FND_perim
 ** ----------------------------------------------------------------
 ** 
 ** STEP: apply force
