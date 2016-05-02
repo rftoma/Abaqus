@@ -2871,13 +2871,13 @@ S_PIER, RP_F_CNS__CNS_
 *Surface Interaction, name=Cohesive
 1.,
 *Cohesive Behavior, REPEATED CONTACTS
-5000.,5000.,5000.
+90000.,90000.,90000.
 *Surface Interaction, name=NormalTangent
 1.,
 *Friction, slip tolerance=0.005, taumax=5.
  0.4,
-*Surface Behavior, pressure-overclosure=EXPONENTIAL
-0.05, 50.
+*Surface Behavior, pressure-overclosure=LINEAR
+90000., 
 ** 
 ** INTERACTIONS
 ** 
