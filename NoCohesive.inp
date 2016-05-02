@@ -2886,8 +2886,8 @@ S_PIER, RP_F_CNS__CNS_
 90000.,90000.,90000.
 *Surface Interaction, name=NormalTangent
 1.,
-*Friction, slip tolerance=0.005, taumax=5.
- 0.85,
+*Friction, lagrange, taumax=5.
+ 0.9,
 *Surface Behavior, pressure-overclosure=HARD
 ** 
 ** INTERACTIONS
