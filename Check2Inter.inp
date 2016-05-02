@@ -2505,8 +2505,18 @@ _SURF_SOIL_BOT_S4, S4
 _S_PIER_SNEG, SNEG
 *Surface, type=ELEMENT, name=S_SURF-3
 _S_SURF-3_SNEG, SNEG
-*Surface, type=NODE, name=SOIL-1_SOILUNDERFND_CNS_, internal
-SOIL-1.SOILUNDERFND, 1.
+*Elset, elset=_m_FND_perim_S2, internal, instance=FND-1
+ 18, 24
+*Elset, elset=_m_FND_perim_S3, internal, instance=FND-1
+  7,  8,  9, 10, 11, 12, 19, 20, 21, 22, 23, 24
+*Elset, elset=_m_FND_perim_S4, internal, instance=FND-1
+ 1, 7
+*Elset, elset=_m_FND_perim_S4, internal, instance=SOIL-1
+ 409, 433, 457, 481, 505, 529, 697, 721, 745, 769, 793, 817
+*Surface, type=ELEMENT, name=m_FND_perim
+_m_FND_perim_S2, S2
+_m_FND_perim_S3, S3
+_m_FND_perim_S4, S4
 *Surface, type=NODE, name=RP_F_CNS__CNS_, internal
 RP_F_CNS_, 1.
 ** Constraint: F-P-1
@@ -2870,9 +2880,9 @@ S_PIER, RP_F_CNS__CNS_
 ** 
 *Surface Interaction, name=Cohesive
 1.,
-*Surface Behavior, pressure-overclosure=EXPONENTIAL
-0.05, 5.
-*Cohesive Behavior
+*Surface Behavior, pressure-overclosure=LINEAR
+5000., 
+*Cohesive Behavior, REPEATED CONTACTS
 *Surface Interaction, name=NormalTangent
 1.,
 *Friction, slip tolerance=0.005, taumax=5.
@@ -2882,8 +2892,8 @@ S_PIER, RP_F_CNS__CNS_
 ** INTERACTIONS
 ** 
 ** Interaction: Cohesive
-*Contact Pair, interaction=Cohesive, small sliding
-SOIL-1_SOILUNDERFND_CNS_, FND-1.BOT_F
+*Contact Pair, interaction=Cohesive, small sliding, type=SURFACE TO SURFACE
+SOIL-1.BASE_SOIL, m_FND_perim
 ** ----------------------------------------------------------------
 ** 
 ** STEP: apply force
