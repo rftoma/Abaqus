@@ -2510,7 +2510,7 @@ SOIL-1.SOILUNDERFND, 1.
 *Surface, type=NODE, name=RP_F_CNS__CNS_, internal
 RP_F_CNS_, 1.
 ** Constraint: F-P-1
-*Tie, name=F-P-1, adjust=yes, type=NODE TO SURFACE
+*Tie, name=F-P-1, adjust=yes, position tolerance=0.5, type=NODE TO SURFACE
 S_PIER, RP_F_CNS__CNS_
 ** Constraint: M-F
 *Coupling, constraint name=M-F, ref node=MASS-1.MASS, surface=M_SURF-FNDTOP
@@ -2771,7 +2771,8 @@ S_PIER, RP_F_CNS__CNS_
            4.98,         -0.0696,           4.985,          -0.062,            4.99,         -0.0508,           4.995,         -0.0356
              5.,         -0.0176
 *Amplitude, name=Ramp
-             0.,              0.,             0.1,             0.1,             0.5,             0.5,             0.8,             0.8
+             0.,              0.,             0.1,             0.1,             0.2,             0.2,             0.3,             0.3
+            0.5,             0.5,             0.6,             0.6,             0.8,             0.8,             0.9,             0.9
              1.,              1.
 ** 
 ** MATERIALS
@@ -2869,13 +2870,14 @@ S_PIER, RP_F_CNS__CNS_
 ** 
 *Surface Interaction, name=Cohesive
 1.,
-*Cohesive Behavior
+*Cohesive Behavior, REPEATED CONTACTS
+5000.,5000.,5000.
 *Surface Interaction, name=NormalTangent
 1.,
 *Friction, slip tolerance=0.005, taumax=5.
  0.4,
-*Surface Behavior, pressure-overclosure=LINEAR
-50000., 
+*Surface Behavior, pressure-overclosure=EXPONENTIAL
+0.05, 50.
 ** 
 ** INTERACTIONS
 ** 
@@ -2893,6 +2895,14 @@ SOIL-1.BASE_SOIL, FND-1.BOT_F
 Force
 *Dynamic
 0.01,5.,5e-09
+** 
+** BOUNDARY CONDITIONS
+** 
+** Name: Bottom Type: Displacement/Rotation
+*Boundary
+SOIL-1.BOTTOM_LAYER, 1, 1
+SOIL-1.BOTTOM_LAYER, 2, 2
+SOIL-1.BOTTOM_LAYER, 6, 6
 ** 
 ** LOADS
 ** 
