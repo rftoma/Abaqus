@@ -2892,9 +2892,9 @@ S_PIER, RP_F_CNS__CNS_
 ** 
 ** INTERACTIONS
 ** 
-** Interaction: Cohesive
-*Contact Pair, interaction=Cohesive, small sliding, type=SURFACE TO SURFACE
-SOIL-1.BASE_SOIL, m_FND_perim
+** Interaction: NormalTang
+*Contact Pair, interaction=NormalTangent, type=SURFACE TO SURFACE
+SOIL-1.BASE_SOIL, FND-1.BOT_F
 ** ----------------------------------------------------------------
 ** 
 ** STEP: apply force
