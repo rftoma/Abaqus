@@ -2937,7 +2937,8 @@ S_PIER, RP_F_CNS__CNS_
 ** 
 *Surface Interaction, name=Cohesive
 1.,
-*Surface Behavior, pressure-overclosure=HARD
+*Surface Behavior, pressure-overclosure=LINEAR
+5e+06, 
 *Cohesive Behavior, REPEATED CONTACTS
 *Surface Interaction, name=NormalTangent
 1.,
@@ -2949,7 +2950,7 @@ S_PIER, RP_F_CNS__CNS_
 ** INTERACTIONS
 ** 
 ** Interaction: Cohesive
-*Contact Pair, interaction=Cohesive, small sliding
+*Contact Pair, interaction=Cohesive, small sliding, no thickness
 SOIL-1_SOILUNDERFND_CNS_, m_FND_perim
 ** ----------------------------------------------------------------
 ** 
