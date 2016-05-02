@@ -2939,7 +2939,8 @@ S_PIER, RP_F_CNS__CNS_
 1.,
 *Surface Behavior, pressure-overclosure=LINEAR
 5e+06, 
-*Cohesive Behavior, REPEATED CONTACTS
+*Cohesive Behavior
+0.,50000.,50000.
 *Surface Interaction, name=NormalTangent
 1.,
 *Friction, lagrange, taumax=5.
