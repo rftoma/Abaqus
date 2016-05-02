@@ -2870,23 +2870,20 @@ S_PIER, RP_F_CNS__CNS_
 ** 
 *Surface Interaction, name=Cohesive
 1.,
+*Surface Behavior, pressure-overclosure=HARD
 *Cohesive Behavior, REPEATED CONTACTS
 90000.,90000.,90000.
 *Surface Interaction, name=NormalTangent
 1.,
 *Friction, slip tolerance=0.005, taumax=5.
- 0.4,
-*Surface Behavior, pressure-overclosure=LINEAR
-90000., 
+ 0.5,
+*Surface Behavior, pressure-overclosure=HARD
 ** 
 ** INTERACTIONS
 ** 
 ** Interaction: Cohesive
 *Contact Pair, interaction=Cohesive, small sliding
 SOIL-1_SOILUNDERFND_CNS_, FND-1.BOT_F
-** Interaction: NormalTang
-*Contact Pair, interaction=NormalTangent, type=SURFACE TO SURFACE
-SOIL-1.BASE_SOIL, FND-1.BOT_F
 ** ----------------------------------------------------------------
 ** 
 ** STEP: apply force
@@ -2894,7 +2891,7 @@ SOIL-1.BASE_SOIL, FND-1.BOT_F
 *Step, name="apply force", nlgeom=NO, inc=1000000
 Force
 *Dynamic
-0.01,5.,5e-09
+0.01,10.,5e-09
 ** 
 ** BOUNDARY CONDITIONS
 ** 
