@@ -107,7 +107,7 @@ _BOT_F_S3, S3
 *Element, type=MASS, elset=_PickedSet5_MASS_INERTIA-1__
 1, 1
 *Mass, elset=_PickedSet5_MASS_INERTIA-1__
-1e+06, 
+2.7e+08, 
 *End Part
 **  
 *Part, name=PIER
