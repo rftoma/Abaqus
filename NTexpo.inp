@@ -2942,7 +2942,7 @@ S_PIER, RP_F_CNS__CNS_
 *Friction, lagrange, taumax=10.
  0.9,
 *Surface Behavior, pressure-overclosure=EXPONENTIAL
-0.0001, 0.1
+1e-05, 0.1
 ** 
 ** INTERACTIONS
 ** 
