@@ -2939,8 +2939,8 @@ S_PIER, RP_F_CNS__CNS_
 0., 5e+07, 5e+07
 *Surface Interaction, name=NormalTangent
 1.,
-*Friction, lagrange, taumax=5.
- 0.8,
+*Friction, lagrange, taumax=10.
+ 0.9,
 *Surface Behavior, pressure-overclosure=EXPONENTIAL
 0.0001, 0.1
 ** 
