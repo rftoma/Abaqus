@@ -1,0 +1,785 @@
+1
+
+   Abaqus 6.14-1                                  Date 03-May-2016   Time 11:40:31
+   For use by Supplied By SSQ under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes Simulia Corp.
+                                 Rising Sun Mills
+                                 166 Valley Street
+                           Providence, RI 02909-2499, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine Administrator 
+                          you are authorized to run
+                          Abaqus/Standard until 31-Dec-2055
+
+                          Your site id is:  
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                    Abaqus 6.14-1                        * 
+                *                                                         * 
+                *          BUILD ID: 2014_06_05-00.11.02 134264           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using release 6.14 manuals    * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+  *Node
+  *Element, type=CPE4R
+  *Nset, nset=ASSEMBLY_FND-1_BOT_NODES
+  *Nset, nset=ASSEMBLY_FND-1_CORNERS
+  *Nset, nset=ASSEMBLY_FND-1_FND-REFPT_
+  *Nset, nset=ASSEMBLY_FND-1_MD
+  *Nset, nset=ASSEMBLY_FND-1_WHOLE_FND
+  *Elset, elset=ASSEMBLY_FND-1_WHOLE_FND
+  *Elset, elset=ASSEMBLY_FND-1__BOT_F_S3
+  *Node
+  *Element, type=CPE4R
+  *Nset, nset=ASSEMBLY_SOIL-1_BOTTOM_LAYER
+  *Nset, nset=ASSEMBLY_SOIL-1_LEFT_LAYER
+  *Nset, nset=ASSEMBLY_SOIL-1_RIGHT_LAYER
+  *Nset, nset=ASSEMBLY_SOIL-1_SOILUNDERFND
+  *Nset, nset=ASSEMBLY_SOIL-1_SOIL_WHOLE
+  *Nset, nset=ASSEMBLY_SOIL-1_UNDERFND_1
+  *Nset, nset=ASSEMBLY_SOIL-1_UNDERFND_2
+  *Elset, elset=ASSEMBLY_SOIL-1_SOIL_WHOLE
+  *Elset, elset=ASSEMBLY_SOIL-1__BASE_SOIL_S4
+  *Node
+  *Element, type=B21
+  *Nset, nset=ASSEMBLY_PIER-1_PIER
+  *Nset, nset=ASSEMBLY_PIER-1_PIER-REFPT_
+  *Elset, elset=ASSEMBLY_PIER-1_PIER
+  *Node
+  *Element, type=MASS
+  *Nset, nset=ASSEMBLY_MASS-1_MASS
+  *Nset, nset=ASSEMBLY_MASS-1_MASS-REFPT_
+  *Nset, nset=ASSEMBLY_MASS-1__PICKEDSET5
+  *Elset, elset=ASSEMBLY_MASS-1__PICKEDSET5_MASS_INERTIA-1__
+  *Node
+  *Nset, nset=ASSEMBLY_M_SET-9
+  *Nset, nset=ASSEMBLY_M_TOPFND
+  *Nset, nset=ASSEMBLY_RP_F
+  *Nset, nset=ASSEMBLY_RP_F_CNS_
+  *Nset, nset=ASSEMBLY_S_SET-10
+  *Nset, nset=ASSEMBLY_S_SET-11
+  *Nset, nset=ASSEMBLY_WIRE-1-SET-1
+  *Nset, nset=ASSEMBLY__PICKEDSET30
+  *Nset, nset=ASSEMBLY__PICKEDSET62
+  *Elset, elset=ASSEMBLY__M_FND_PERIM_S2
+  *Elset, elset=ASSEMBLY__M_FND_PERIM_S3
+  *Elset, elset=ASSEMBLY__M_FND_PERIM_S4
+  *Elset, elset=ASSEMBLY__M_SURF-1_S1
+  *Elset, elset=ASSEMBLY__M_SURF-1_S1_1
+  *Elset, elset=ASSEMBLY__M_SURF-1_S1_2
+  *Elset, elset=ASSEMBLY__M_SURF-FNDTOP_S1
+  *Elset, elset=ASSEMBLY__SURF_SOIL_BOT_S4
+  *Elset, elset=ASSEMBLY__S_PIER_SNEG
+  *Elset, elset=ASSEMBLY__S_SURF-3_SNEG
+  *rigidbody, refnode=ASSEMBLY__PICKEDSET30, position=CENTEROFMASS, elset=ASSEMBLY_FND-1_WHOLE_FND
+  *contactpair, interaction=NORMALTANGENT, type=SURFACETOSURFACE
+  *tie, name=ASSEMBLY_F-P-1, positiontolerance=0.5, type=NODETOSURFACE, adjust=YES
+  *surface, type=ELEMENT, name=ASSEMBLY_FND-1_BOT_F
+  *surface, type=ELEMENT, name=ASSEMBLY_SOIL-1_BASE_SOIL
+  *surface, type=ELEMENT, name=ASSEMBLY_M_SURF-FNDTOP
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF_SOIL_BOT
+  *surface, type=ELEMENT, name=ASSEMBLY_S_PIER
+  *surface, type=ELEMENT, name=ASSEMBLY_S_SURF-3
+  *surface, type=ELEMENT, name=ASSEMBLY_M_FND_PERIM
+  *surface, type=NODE, name=ASSEMBLY_RP_F_CNS__CNS_
+  *rigidbody, refnode=ASSEMBLY__PICKEDSET30, position=CENTEROFMASS, elset=ASSEMBLY_FND-1_WHOLE_FND
+  *rigidbody, refnode=ASSEMBLY__PICKEDSET30, position=CENTEROFMASS, elset=ASSEMBLY_FND-1_WHOLE_FND
+  *rigidbody, refnode=ASSEMBLY__PICKEDSET30, position=CENTEROFMASS, elset=ASSEMBLY_FND-1_WHOLE_FND
+  *contactpair, interaction=NORMALTANGENT, type=SURFACETOSURFACE
+  *tie, name=ASSEMBLY_F-P-1, positiontolerance=0.5, type=NODETOSURFACE, adjust=YES
+  *surface, type=ELEMENT, name=ASSEMBLY_FND-1_BOT_F
+  *surface, type=ELEMENT, name=ASSEMBLY_SOIL-1_BASE_SOIL
+  *surface, type=ELEMENT, name=ASSEMBLY_M_SURF-FNDTOP
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF_SOIL_BOT
+  *surface, type=ELEMENT, name=ASSEMBLY_S_PIER
+  *surface, type=ELEMENT, name=ASSEMBLY_S_SURF-3
+  *surface, type=ELEMENT, name=ASSEMBLY_M_FND_PERIM
+  *surface, type=NODE, name=ASSEMBLY_RP_F_CNS__CNS_
+  *surface, type=ELEMENT, name=ASSEMBLY_FND-1_BOT_F
+  *surface, type=ELEMENT, name=ASSEMBLY_SOIL-1_BASE_SOIL
+  *surface, type=ELEMENT, name=ASSEMBLY_M_SURF-FNDTOP
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF_SOIL_BOT
+  *surface, type=ELEMENT, name=ASSEMBLY_S_PIER
+  *surface, type=ELEMENT, name=ASSEMBLY_S_SURF-3
+  *surface, type=ELEMENT, name=ASSEMBLY_M_FND_PERIM
+  *surface, type=NODE, name=ASSEMBLY_RP_F_CNS__CNS_
+  *contactpair, interaction=NORMALTANGENT, type=SURFACETOSURFACE
+  *surfaceinteraction, name=COHESIVE
+  *surfaceinteraction, name=NORMALTANGENT
+  *surfacebehavior, pressure-overclosure=EXPONENTIAL
+  *contactpair, interaction=NORMALTANGENT, type=SURFACETOSURFACE
+  *tie, name=ASSEMBLY_F-P-1, positiontolerance=0.5, type=NODETOSURFACE, adjust=YES
+  *rigidbody, refnode=ASSEMBLY__PICKEDSET30, position=CENTEROFMASS, elset=ASSEMBLY_FND-1_WHOLE_FND
+  *coupling, constraintname=ASSEMBLY_M-F, refnode=ASSEMBLY_MASS-1_MASS, surface=ASSEMBLY_M_SURF-FNDTOP
+  *tie, name=ASSEMBLY_F-P-1, positiontolerance=0.5, type=NODETOSURFACE, adjust=YES
+  *beamsection, elset=ASSEMBLY_PIER-1_PIER, poisson=0.33, temperature=GRADIENTS, material=PIER, section=RECTANGULAR
+  *coupling, constraintname=ASSEMBLY_M-F, refnode=ASSEMBLY_MASS-1_MASS, surface=ASSEMBLY_M_SURF-FNDTOP
+  *coupling, constraintname=ASSEMBLY_M-F, refnode=ASSEMBLY_MASS-1_MASS, surface=ASSEMBLY_M_SURF-FNDTOP
+  *coupling, constraintname=ASSEMBLY_M-F, refnode=ASSEMBLY_MASS-1_MASS, surface=ASSEMBLY_M_SURF-FNDTOP
+  *distributing, weightingmethod=UNIFORM
+  *solidsection, elset=ASSEMBLY_FND-1_WHOLE_FND, material=FOUNDATION
+  *solidsection, elset=ASSEMBLY_SOIL-1_SOIL_WHOLE, material=SOIL
+  *material, name=FOUNDATION
+  *density
+  *elastic
+  *plastic
+  *material, name=MASS
+  *density
+  *material, name=PIER
+  *density
+  *elastic
+  *material, name=SOIL
+  *damping, beta=0.0017
+  *density
+  *depvar
+  *elastic, dependencies=2
+  *plastic, dependencies=2, hardening=COMBINED, datatype=PARAMETERS, numberbackstresses=1
+  *userdefinedfield
+  *mass, elset=ASSEMBLY_MASS-1__PICKEDSET5_MASS_INERTIA-1__
+  *surfaceinteraction, name=COHESIVE
+  *surfaceinteraction, name=NORMALTANGENT
+  *friction, lagrange, taumax=5
+  *surfacebehavior, pressure-overclosure=EXPONENTIAL
+  *surfaceinteraction, name=COHESIVE
+  *surfaceinteraction, name=NORMALTANGENT
+  *solidsection, elset=ASSEMBLY_FND-1_WHOLE_FND, material=FOUNDATION
+  *solidsection, elset=ASSEMBLY_SOIL-1_SOIL_WHOLE, material=SOIL
+  *rigidbody, refnode=ASSEMBLY__PICKEDSET30, position=CENTEROFMASS, elset=ASSEMBLY_FND-1_WHOLE_FND
+  *rigidbody, refnode=ASSEMBLY__PICKEDSET30, position=CENTEROFMASS, elset=ASSEMBLY_FND-1_WHOLE_FND
+  *boundary
+  *contactpair, interaction=NORMALTANGENT, type=SURFACETOSURFACE
+  *tie, name=ASSEMBLY_F-P-1, positiontolerance=0.5, type=NODETOSURFACE, adjust=YES
+
+ ***WARNING: FOR *TIE PAIR (ASSEMBLY_S_PIER-ASSEMBLY_RP_F_CNS__CNS_), 
+             ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE 
+             ADJUSTMENT DISTANCE = 2.22000E-16.
+  *tie, name=ASSEMBLY_F-P-1, positiontolerance=0.5, type=NODETOSURFACE, adjust=YES
+  *tie, name=ASSEMBLY_F-P-1, positiontolerance=0.5, type=NODETOSURFACE, adjust=YES
+
+ ***WARNING: SLAVE NODE 1 INSTANCE PIER-1 WILL NOT BE TIED TO THE MASTER 
+             SURFACE ASSEMBLY_RP_F_CNS__CNS_. THE DISTANCE FROM THE MASTER 
+             SURFACE IS GREATER THAN THE POSITION TOLERANCE VALUE.
+  *mpc
+  *solidsection, elset=ASSEMBLY_FND-1_WHOLE_FND, material=FOUNDATION
+  *solidsection, elset=ASSEMBLY_SOIL-1_SOIL_WHOLE, material=SOIL
+  *beamsection, elset=ASSEMBLY_PIER-1_PIER, poisson=0.33, temperature=GRADIENTS, material=PIER, section=RECTANGULAR
+  *mass, elset=ASSEMBLY_MASS-1__PICKEDSET5_MASS_INERTIA-1__
+  *surfaceinteraction, name=COHESIVE
+  *surfaceinteraction, name=NORMALTANGENT
+  *contactpair, interaction=NORMALTANGENT, type=SURFACETOSURFACE
+  *rigidbody, refnode=ASSEMBLY__PICKEDSET30, position=CENTEROFMASS, elset=ASSEMBLY_FND-1_WHOLE_FND
+  *surface, type=ELEMENT, name=ASSEMBLY_FND-1_BOT_F
+  *surface, type=ELEMENT, name=ASSEMBLY_SOIL-1_BASE_SOIL
+  *surface, type=ELEMENT, name=ASSEMBLY_M_SURF-FNDTOP
+  *surface, type=ELEMENT, name=ASSEMBLY_SURF_SOIL_BOT
+  *surface, type=ELEMENT, name=ASSEMBLY_S_PIER
+  *surface, type=ELEMENT, name=ASSEMBLY_S_SURF-3
+  *surface, type=ELEMENT, name=ASSEMBLY_M_FND_PERIM
+  *surface, type=NODE, name=ASSEMBLY_RP_F_CNS__CNS_
+  *tie, name=ASSEMBLY_F-P-1, positiontolerance=0.5, type=NODETOSURFACE, adjust=YES
+  *output, field, timeinterval=1
+  *output, history, numberinterval=1
+  *elementoutput, directions=YES
+  *elementoutput
+
+ ***WARNING: 1 nodes are either missing intersection with their respective 
+             master surface or are outside the adjust zone. The nodes have been 
+             identified in node set WarnNodeMissMasterIntersect.
+  *output, field, timeinterval=1
+  *output, history, numberinterval=1
+  *elementoutput, directions=YES
+  *elementoutput
+  *output, field, timeinterval=1
+  *output, history, numberinterval=1
+  *elementoutput, directions=YES
+  *elementoutput
+
+ ***WARNING: MPCS (EXTERNAL or INTERNAL, including those generated from rigid 
+             body definitions), KINEMATIC COUPLINGS, AND/OR EQUATIONS WILL 
+             ACTIVATE ADDITIONAL DEGREES OF FREEDOM
+  *rigidbody, refnode=ASSEMBLY__PICKEDSET30, position=CENTEROFMASS, elset=ASSEMBLY_FND-1_WHOLE_FND
+  *amplitude, name=CYCLIC_MAN
+  *amplitude, name=EQ
+  *amplitude, name=RAMP
+  *amplitude, name=CYCLIC, definition=PERIODIC
+  *Step, name="apply force", nlgeom=NO, inc=1000000
+  *output, field, timeinterval=1
+  *output, history, numberinterval=1
+  *Step, name="apply force", nlgeom=NO, inc=1000000
+
+ ***WARNING: NODE SET ASSEMBLY_FND-1_FND-REFPT_ HAS NO MEMBERS AND WILL BE 
+             IGNORED.  NODES DEFINED IN THIS SET MAY HAVE BEEN DELETED BECAUSE 
+             THEY WERE NOT CONNECTED TO ANY ELEMENTS.
+
+ ***WARNING: NODE SET ASSEMBLY_PIER-1_PIER-REFPT_ HAS NO MEMBERS AND WILL BE 
+             IGNORED.  NODES DEFINED IN THIS SET MAY HAVE BEEN DELETED BECAUSE 
+             THEY WERE NOT CONNECTED TO ANY ELEMENTS.
+
+ ***WARNING: NODE SET ASSEMBLY_S_SET-11 HAS NO MEMBERS AND WILL BE IGNORED.  
+             NODES DEFINED IN THIS SET MAY HAVE BEEN DELETED BECAUSE THEY WERE 
+             NOT CONNECTED TO ANY ELEMENTS.
+  *Step, name="apply force", nlgeom=NO, inc=1000000
+  Force                                                                           
+  *dynamic
+  *boundary
+  *output, field, timeinterval=1
+  *nodeoutput
+  *elementoutput, directions=YES
+  *contactoutput
+  *output, history, numberinterval=1
+  *elementoutput
+  *contactoutput
+  *endstep
+
+ ***WARNING: OUTPUT AT EXACT, PREDEFINED TIME POINTS WAS REQUESTED IN THIS 
+             STEP. IN ORDER TO WRITE OUTPUT AT EXACT TIME POINTS SPECIFIED, 
+             Abaqus MIGHT USE TIME INCREMENTS SMALLER THAN THE MINIMUM TIME 
+             INCREMENT ALLOWED IN THE STEP. IN ADDITION, THE NUMBER OF 
+             INCREMENTS REQUIRED TO COMPLETE THE STEP WILL IN GENERAL INCREASE.
+
+ ***WARNING: INTEGRATION AND SECTION POINT OUTPUT VARIABLES WILL NOT BE OUTPUT 
+             FOR DEFORMABLE ELEMENTS THAT ARE DECLARED AS RIGID USING THE 
+             *RIGID BODY OPTION
+
+ ***WARNING: INTEGRATION AND SECTION POINT OUTPUT VARIABLES WILL NOT BE OUTPUT 
+             FOR DEFORMABLE ELEMENTS THAT ARE DECLARED AS RIGID USING THE 
+             *RIGID BODY OPTION
+
+ ***WARNING: OUTPUT REQUEST E IS NOT AVAILABLE FOR ELEMENT TYPE MASS
+
+ ***WARNING: OUTPUT REQUEST EE IS NOT AVAILABLE FOR ELEMENT TYPE MASS
+
+ ***WARNING: OUTPUT REQUEST PEEQ IS NOT AVAILABLE FOR ELEMENT TYPE MASS
+
+ ***WARNING: OUTPUT REQUEST PEMAG IS NOT AVAILABLE FOR ELEMENT TYPE MASS
+
+ ***WARNING: OUTPUT REQUEST S IS NOT AVAILABLE FOR ELEMENT TYPE MASS
+
+ ***WARNING: OUTPUT REQUEST PEEQMAX IS NOT AVAILABLE FOR ELEMENT TYPE MASS
+
+ ***WARNING: OUTPUT REQUEST IRF1 IS NOT AVAILABLE FOR THIS TYPE OF ANALYSIS
+
+ ***WARNING: OUTPUT REQUEST IRF2 IS NOT AVAILABLE FOR THIS TYPE OF ANALYSIS
+
+ ***WARNING: OUTPUT REQUEST IRF3 IS NOT AVAILABLE FOR THIS TYPE OF ANALYSIS
+
+ ***WARNING: OUTPUT REQUEST IRM1 IS NOT AVAILABLE FOR THIS TYPE OF ANALYSIS
+
+ ***WARNING: OUTPUT REQUEST IRM2 IS NOT AVAILABLE FOR THIS TYPE OF ANALYSIS
+
+ ***WARNING: OUTPUT REQUEST IRM3 IS NOT AVAILABLE FOR THIS TYPE OF ANALYSIS
+  *Step, name="apply force", nlgeom=NO, inc=1000000
+  *dynamic
+  *boundary
+  *cload, amplitude=CYCLIC_MAN
+  *endstep
+
+ ***WARNING: NODES 118 INSTANCE SOIL-1 AND 38 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 117 INSTANCE SOIL-1 AND 39 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 116 INSTANCE SOIL-1 AND 40 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 115 INSTANCE SOIL-1 AND 41 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 114 INSTANCE SOIL-1 AND 42 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 113 INSTANCE SOIL-1 AND 43 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 112 INSTANCE SOIL-1 AND 44 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 111 INSTANCE SOIL-1 AND 45 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 110 INSTANCE SOIL-1 AND 46 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 109 INSTANCE SOIL-1 AND 47 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 108 INSTANCE SOIL-1 AND 48 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 107 INSTANCE SOIL-1 AND 49 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 106 INSTANCE SOIL-1 AND 50 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 105 INSTANCE SOIL-1 AND 51 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 104 INSTANCE SOIL-1 AND 52 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 103 INSTANCE SOIL-1 AND 53 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 102 INSTANCE SOIL-1 AND 54 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 101 INSTANCE SOIL-1 AND 55 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 100 INSTANCE SOIL-1 AND 56 INSTANCE SOIL-1 IN PIN MPC ARE 
+             NOT COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY 
+             MOTION BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR 
+             CONSIDER SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 99 INSTANCE SOIL-1 AND 57 INSTANCE SOIL-1 IN PIN MPC ARE NOT 
+             COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY MOTION 
+             BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR CONSIDER 
+             SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 98 INSTANCE SOIL-1 AND 58 INSTANCE SOIL-1 IN PIN MPC ARE NOT 
+             COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY MOTION 
+             BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR CONSIDER 
+             SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 97 INSTANCE SOIL-1 AND 59 INSTANCE SOIL-1 IN PIN MPC ARE NOT 
+             COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY MOTION 
+             BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR CONSIDER 
+             SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 96 INSTANCE SOIL-1 AND 60 INSTANCE SOIL-1 IN PIN MPC ARE NOT 
+             COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY MOTION 
+             BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR CONSIDER 
+             SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 7 INSTANCE SOIL-1 AND 4 INSTANCE SOIL-1 IN PIN MPC ARE NOT 
+             COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY MOTION 
+             BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR CONSIDER 
+             SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: NODES 8 INSTANCE SOIL-1 AND 3 INSTANCE SOIL-1 IN PIN MPC ARE NOT 
+             COINCIDENT.  THE MPC WILL CONSTRAIN ROTATIONAL RIGID-BODY MOTION 
+             BETWEEN THE NODES.  INTERPRET RESULTS WITH CAUTION OR CONSIDER 
+             SUBSTITUTING A BEAM OR LINK MPC.
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 2 INSTANCE SOIL-1 - THIS 
+             BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 3 INSTANCE SOIL-1 - THIS 
+             BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 5 INSTANCE SOIL-1 - THIS 
+             BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 1 IS NOT ACTIVE ON NODE 8 INSTANCE SOIL-1 - THIS 
+             BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 2 IS NOT ACTIVE ON NODE 8 INSTANCE SOIL-1 - THIS 
+             BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 8 INSTANCE SOIL-1 - THIS 
+             BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 32 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 33 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 34 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 35 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 36 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 37 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 119 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 120 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 121 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 122 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 123 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 124 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 125 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 126 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 127 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 128 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 129 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 130 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 131 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 132 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 133 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 134 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 135 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 723 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 771 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 819 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 867 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 915 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 963 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1011 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1059 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1107 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1155 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1203 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1251 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1252 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1300 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1348 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1443 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1491 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: DEGREE OF FREEDOM 6 IS NOT ACTIVE ON NODE 1539 INSTANCE SOIL-1 - 
+             THIS BOUNDARY CONDITION IS IGNORED
+
+ ***WARNING: Boundary conditions are specified on inactive dof of 45 nodes. The 
+             nodes have been identified in node set WarnNodeBCInactiveDof.
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                  1108
+          NUMBER OF ELEMENTS DEFINED BY THE USER AND *TIE        1083
+          NUMBER OF INTERNAL ELEMENTS GENERATED FOR CONTACT        24
+          NUMBER OF NODES IS                                     1219
+          NUMBER OF NODES DEFINED BY THE USER                    1168
+          NUMBER OF INTERNAL NODES GENERATED BY THE PROGRAM        51
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                 2485
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.30000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =  0.40000    
+       WALLCLOCK TIME (SEC) =          1
+1
+
+   Abaqus 6.14-1                                  Date 03-May-2016   Time 11:40:39
+   For use by Supplied By SSQ under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+     Force                                                                                TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     D Y N A M I C   A N A L Y S I S - I M P L I C I T  I N T E G R A T I O N
+
+
+          Force                                                                           
+
+          DYNAMIC APPLICATION PACKED SCHEME IS                 MODERATE DISSIPATION
+          HILBER-HUGHES-TAYLOR (HHT) TIME INTEGRATOR IS USED
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                5.000E-02
+          AND A TOTAL TIME PERIOD OF                            10.0    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                5.000E-09
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+          THE HALF-INCREMENT RESIDUALS WILL NOT BE CALCULATED
+
+          HILBER-HUGHES-TAYLOR METHOD PARAMETERS:  ALPHA   IS  -0.414214    
+                                                   BETA    IS   0.500000    
+                                                   GAMMA   IS   0.914214    
+          CONTACT IMPACT/RELEASE COMPUTATIONS ARE SKIPPED
+          AGGRESSIVE   TIME INCREMENTATION IS USED
+          STEP AMPLITUDE IS                                    STEP
+
+          UNSYMMETRIC MATRIX STORAGE AND SOLUTION WILL BE USED
+
+
+
+                    TOTAL MASS OF MODEL
+
+                           (MASS MAY BE DIFFERENT IN EACH CARTESIAN 
+                            DIRECTION IF USER ELEMENTS ARE USED)
+
+                           MASS ASSOCIATED WITH DIRECTION:
+                             X                   Y                   Z  
+
+                       1000439.           1000439.           1000000.    
+
+
+                    LOCATION OF THE CENTER OF MASS OF THE MODEL
+
+                       18.00000           30.99522           0.000000    
+
+
+                    MOMENTS OF INERTIA ABOUT THE ORIGIN
+                           I(XX)               I(YY)               I(ZZ)
+
+                      9.6100000E+08      3.2400000E+08      1.2853403E+09
+
+
+                    PRODUCTS OF INERTIA ABOUT THE ORIGIN
+                           I(XY)               I(XZ)               I(YZ)
+
+                     -5.5815915E+08       0.000000           0.000000    
+
+
+                    MOMENTS OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XX)               I(YY)               I(ZZ)
+
+                       296377.4         -2.0980835E-05       72029.44    
+
+
+                    PRODUCTS OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XY)               I(XZ)               I(YZ)
+
+                      1.8119812E-05       0.000000           0.000000    
+
+
+                              RIGID BODY MASS AND INERTIA 
+                              --------------------------- 
+
+ 
+ 
+                     REFERENCE NODE IS:         1
+ 
+ 
+                     POSITION OF THE REFERENCE NODE
+                               X                Y                Z
+                          18.00000           26.50000           0.000000
+ 
+ 
+                     TOTAL MASS OF RIGID BODY
+ 
+                          6.300000
+ 
+ 
+                     LOCATION OF THE CENTER OF MASS OF RIGID BODY
+                          1.8000000E+01     2.6500000E+01     0.0000000E+00
+ 
+ 
+                     MOMENTS OF INERTIA ABOUT THE CENTER OF RIGID BODY
+                            I(XX)               I(YY)               I(ZZ)
+                         -4424.175          -2041.200           5.578125
+ 
+ 
+                     PRODUCTS OF INERTIA ABOUT THE CENTER OF RIGID BODY
+                            I(XY)               I(XZ)               I(YZ)
+                         1.3642421E-12       0.000000           0.000000
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1         1.51E+007               18                 28
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH     95 WARNING MESSAGES ON THE DAT FILE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   7.2000    
+       SYSTEM TIME (SEC)    =  0.30000    
+       TOTAL CPU TIME (SEC) =   7.5000    
+       WALLCLOCK TIME (SEC) =          7
