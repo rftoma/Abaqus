@@ -3064,8 +3064,6 @@ BEAM, SOIL-1.6, SOIL-1.24
 _M_SURF-FNDTOP_S1, S1
 *Surface, type=ELEMENT, name=S_PIER
 _S_PIER_SNEG, SNEG
-*Surface, type=NODE, name=SOIL-1_SOIL_F_CNS_, internal
-SOIL-1.SOIL_F, 1.
 *Surface, type=NODE, name=RP_F_CNS_, internal
 RP_F, 1.
 ** Constraint: F-P-1-1-1-1
@@ -3657,12 +3655,18 @@ S_PIER, RP_F_CNS_
 1.,
 *Cohesive Behavior
  1e+08, 1e+08, 1e+08
+*Surface Interaction, name=NT_expo
+1.,
+*Friction, slip tolerance=0.001, taumax=10.
+1.,
+*Surface Behavior, pressure-overclosure=EXPONENTIAL
+1e-06, 10.
 ** 
 ** INTERACTIONS
 ** 
-** Interaction: COHESIVE-1
-*Contact Pair, interaction=COHESIVE, small sliding, adjust=0.001
-SOIL-1_SOIL_F_CNS_, FND-1.BOT_F
+** Interaction: NT
+*Contact Pair, interaction=NT_expo, small sliding, type=SURFACE TO SURFACE, adjust=0.001
+SOIL-1.SOIL_F, FND-1.BOT_F
 ** ----------------------------------------------------------------
 ** 
 ** STEP: Step-1
@@ -3688,8 +3692,7 @@ SOIL-1.SOIL_ACC, 6, 6
 MASS-1.MASS, 2, 2
 ** Name: RB_disp Type: Displacement/Rotation
 *Boundary
-RP_F, 1, 1
-RP_F, 6, 6
+RP_F, 2, 2
 ** 
 ** LOADS
 ** 
@@ -3741,8 +3744,7 @@ SOIL-1.SOIL_ACC, 2, 2
 MASS-1.MASS, 2, 2
 ** Name: RB_disp Type: Displacement/Rotation
 *Boundary, op=NEW
-RP_F, 1, 1
-RP_F, 6, 6
+RP_F, 2, 2
 ** 
 ** LOADS
 ** 
