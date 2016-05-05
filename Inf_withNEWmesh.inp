@@ -3661,6 +3661,12 @@ S_PIER, RP_F_CNS_
  0.9,
 *Surface Behavior, pressure-overclosure=EXPONENTIAL
 1e-06, 10.
+** 
+** INTERACTIONS
+** 
+** Interaction: NT
+*Contact Pair, interaction=NT_expo, small sliding, type=SURFACE TO SURFACE, adjust=0.001
+SOIL-1.SOIL_F, FND-1.BOT_F
 ** ----------------------------------------------------------------
 ** 
 ** STEP: Step-2
@@ -3673,7 +3679,7 @@ S_PIER, RP_F_CNS_
 ** 
 ** Name: Acc-BC-1 Type: Acceleration/Angular acceleration
 *Boundary, amplitude=EQ, type=ACCELERATION
-SOIL-1.SOIL_ACC, 1, 1, 1.
+SOIL-1.SOIL_ACC, 1, 1, 9.81
 ** Name: Disp-BC-8 Type: Displacement/Rotation
 *Boundary
 SOIL-1.SOIL_ACC, 2, 2
