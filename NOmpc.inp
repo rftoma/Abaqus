@@ -4823,7 +4823,7 @@ SOIL-1.SOILBOTTOMNODES, 2, 2
 SOIL-1.SOILBOTTOMNODES, 2, 2
 ** Name: acc_base Type: Acceleration/Angular acceleration
 *Boundary, op=NEW, amplitude=EQ, type=ACCELERATION
-Acc_nodes, 1, 1, 9.81
+SOIL-1.SOILBOTTOMNODES, 1, 1, 9.81
 ** 
 ** LOADS
 ** 
