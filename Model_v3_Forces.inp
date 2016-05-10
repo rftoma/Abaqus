@@ -13207,6 +13207,20 @@ Forces on the nodes
 *Static
 0.01, 10., 0.0001, 0.01
 ** 
+** BOUNDARY CONDITIONS
+** 
+** Name: Disp-BC-1 Type: Displacement/Rotation
+*Boundary, op=NEW
+SOIL-1.SOIL_BOTNODES, 1, 1
+** Name: Disp-BC-2 Type: Displacement/Rotation
+*Boundary, op=NEW
+SOIL-1.SOIL_BOTNODES, 2, 2
+** Name: Disp-BC-3 Type: Displacement/Rotation
+*Boundary, op=NEW
+SOIL-1.SOIL_BOTNODES, 6, 6
+** Name: Disp-BC-4 Type: Displacement/Rotation
+*Boundary, op=NEW
+** 
 ** LOADS
 ** 
 ** Name: CFORCE-1   Type: Concentrated force
