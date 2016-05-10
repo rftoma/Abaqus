@@ -75,7 +75,9 @@
   1,  16,   1
 *Nset, nset=_PICKEDSET12, internal
  35,
-*Nset, nset=_PickedSet13, internal
+*Nset, nset=_PICKEDSET13, internal
+ 35,
+*Nset, nset=_PickedSet14, internal
  35,
 *Surface, type=ELEMENT, name=SURF-FOOTINGBOT
 _SURF-FOOTINGBOT_S3, S3
@@ -84,9 +86,9 @@ _SURF-FOOTINGTOP_S1, S1
 ** Section: Section-1-FOOTING
 *Solid Section, elset=FOOTING, material=FOOTING
 ,
-*Element, type=MASS, elset=_PickedSet13__PICKEDSET12_SET-9_INERTIA-1___
+*Element, type=MASS, elset=_PickedSet14__PICKEDSET13__PICKEDSET12_SET-9_INERTIA-1____
 17, 35
-*Mass, elset=_PickedSet13__PICKEDSET12_SET-9_INERTIA-1___
+*Mass, elset=_PickedSet14__PICKEDSET13__PICKEDSET12_SET-9_INERTIA-1____
 10000., 
 *End Part
 **  
@@ -125,7 +127,9 @@ _SURF-FOOTINGTOP_S1, S1
   1,  10,   1
 *Elset, elset=_SURF-PIER_SPOS, internal, generate
   1,  10,   1
-*Nset, nset=_PickedSet9, internal
+*Nset, nset=_PICKEDSET9, internal
+ 12,
+*Nset, nset=_PickedSet10, internal
  12,
 *Surface, type=ELEMENT, name=SURF-PIER
 _SURF-PIER_SPOS, SPOS
@@ -133,9 +137,9 @@ _SURF-PIER_SPOS, SPOS
 *Beam Section, elset=S_PIER, material=PIER, poisson = 0.3, temperature=GRADIENTS, section=CIRC
 3.
 0.,0.,-1.
-*Element, type=MASS, elset=_PickedSet9_SET-3_INERTIA-1__
+*Element, type=MASS, elset=_PickedSet10__PICKEDSET9_SET-3_INERTIA-1___
 11, 12
-*Mass, elset=_PickedSet9_SET-3_INERTIA-1__
+*Mass, elset=_PickedSet10__PICKEDSET9_SET-3_INERTIA-1___
 10000., 
 *End Part
 **  
@@ -12354,65 +12358,66 @@ _SURF-S-F_S4, S4
 *End Instance
 **  
 *MPC
-BEAM, SOIL-1.570, SOIL-1.85
-BEAM, SOIL-1.569, SOIL-1.86
-BEAM, SOIL-1.568, SOIL-1.87
-BEAM, SOIL-1.567, SOIL-1.88
-BEAM, SOIL-1.566, SOIL-1.89
-BEAM, SOIL-1.565, SOIL-1.90
-BEAM, SOIL-1.564, SOIL-1.91
-BEAM, SOIL-1.563, SOIL-1.92
-BEAM, SOIL-1.562, SOIL-1.93
-BEAM, SOIL-1.561, SOIL-1.94
-BEAM, SOIL-1.560, SOIL-1.95
-BEAM, SOIL-1.559, SOIL-1.96
-BEAM, SOIL-1.558, SOIL-1.97
-BEAM, SOIL-1.557, SOIL-1.98
-BEAM, SOIL-1.556, SOIL-1.99
-BEAM, SOIL-1.555, SOIL-1.100
-BEAM, SOIL-1.554, SOIL-1.101
-BEAM, SOIL-1.553, SOIL-1.102
-BEAM, SOIL-1.552, SOIL-1.103
-BEAM, SOIL-1.551, SOIL-1.104
-BEAM, SOIL-1.550, SOIL-1.105
-BEAM, SOIL-1.549, SOIL-1.106
-BEAM, SOIL-1.548, SOIL-1.107
-BEAM, SOIL-1.547, SOIL-1.108
-BEAM, SOIL-1.546, SOIL-1.109
-BEAM, SOIL-1.545, SOIL-1.110
-BEAM, SOIL-1.544, SOIL-1.111
-BEAM, SOIL-1.543, SOIL-1.112
-BEAM, SOIL-1.542, SOIL-1.113
-BEAM, SOIL-1.541, SOIL-1.114
-BEAM, SOIL-1.540, SOIL-1.115
-BEAM, SOIL-1.539, SOIL-1.116
-BEAM, SOIL-1.538, SOIL-1.117
-BEAM, SOIL-1.537, SOIL-1.118
-BEAM, SOIL-1.536, SOIL-1.119
-BEAM, SOIL-1.535, SOIL-1.120
-BEAM, SOIL-1.534, SOIL-1.121
-BEAM, SOIL-1.533, SOIL-1.122
-BEAM, SOIL-1.532, SOIL-1.123
-BEAM, SOIL-1.531, SOIL-1.124
-BEAM, SOIL-1.530, SOIL-1.125
-BEAM, SOIL-1.529, SOIL-1.126
-BEAM, SOIL-1.528, SOIL-1.127
-BEAM, SOIL-1.527, SOIL-1.128
-BEAM, SOIL-1.526, SOIL-1.129
-BEAM, SOIL-1.525, SOIL-1.130
-BEAM, SOIL-1.524, SOIL-1.131
-BEAM, SOIL-1.523, SOIL-1.132
-BEAM, SOIL-1.522, SOIL-1.133
-BEAM, SOIL-1.521, SOIL-1.134
-BEAM, SOIL-1.520, SOIL-1.135
-BEAM, SOIL-1.519, SOIL-1.136
-BEAM, SOIL-1.518, SOIL-1.137
-BEAM, SOIL-1.517, SOIL-1.138
-BEAM, SOIL-1.516, SOIL-1.139
-BEAM, SOIL-1.515, SOIL-1.140
-BEAM, SOIL-1.514, SOIL-1.141
-BEAM, SOIL-1.513, SOIL-1.142
 BEAM, SOIL-1.512, SOIL-1.143
+BEAM, SOIL-1.513, SOIL-1.142
+BEAM, SOIL-1.514, SOIL-1.141
+BEAM, SOIL-1.515, SOIL-1.140
+BEAM, SOIL-1.516, SOIL-1.139
+BEAM, SOIL-1.517, SOIL-1.138
+BEAM, SOIL-1.518, SOIL-1.137
+BEAM, SOIL-1.519, SOIL-1.136
+BEAM, SOIL-1.520, SOIL-1.135
+BEAM, SOIL-1.521, SOIL-1.134
+BEAM, SOIL-1.522, SOIL-1.133
+BEAM, SOIL-1.523, SOIL-1.132
+BEAM, SOIL-1.524, SOIL-1.131
+BEAM, SOIL-1.525, SOIL-1.130
+BEAM, SOIL-1.526, SOIL-1.129
+BEAM, SOIL-1.527, SOIL-1.128
+BEAM, SOIL-1.528, SOIL-1.127
+BEAM, SOIL-1.529, SOIL-1.126
+BEAM, SOIL-1.530, SOIL-1.125
+BEAM, SOIL-1.531, SOIL-1.124
+BEAM, SOIL-1.532, SOIL-1.123
+BEAM, SOIL-1.533, SOIL-1.122
+BEAM, SOIL-1.534, SOIL-1.121
+BEAM, SOIL-1.535, SOIL-1.120
+BEAM, SOIL-1.536, SOIL-1.119
+BEAM, SOIL-1.537, SOIL-1.118
+BEAM, SOIL-1.538, SOIL-1.117
+BEAM, SOIL-1.539, SOIL-1.116
+BEAM, SOIL-1.540, SOIL-1.115
+BEAM, SOIL-1.541, SOIL-1.114
+BEAM, SOIL-1.542, SOIL-1.113
+BEAM, SOIL-1.543, SOIL-1.112
+BEAM, SOIL-1.544, SOIL-1.111
+BEAM, SOIL-1.545, SOIL-1.110
+BEAM, SOIL-1.546, SOIL-1.109
+BEAM, SOIL-1.547, SOIL-1.108
+BEAM, SOIL-1.548, SOIL-1.107
+BEAM, SOIL-1.549, SOIL-1.106
+BEAM, SOIL-1.550, SOIL-1.105
+BEAM, SOIL-1.551, SOIL-1.104
+BEAM, SOIL-1.552, SOIL-1.103
+BEAM, SOIL-1.553, SOIL-1.102
+BEAM, SOIL-1.554, SOIL-1.101
+BEAM, SOIL-1.555, SOIL-1.100
+BEAM, SOIL-1.556, SOIL-1.99
+BEAM, SOIL-1.557, SOIL-1.98
+BEAM, SOIL-1.558, SOIL-1.97
+BEAM, SOIL-1.559, SOIL-1.96
+BEAM, SOIL-1.560, SOIL-1.95
+BEAM, SOIL-1.561, SOIL-1.94
+BEAM, SOIL-1.562, SOIL-1.93
+BEAM, SOIL-1.563, SOIL-1.92
+BEAM, SOIL-1.564, SOIL-1.91
+BEAM, SOIL-1.565, SOIL-1.90
+BEAM, SOIL-1.566, SOIL-1.89
+BEAM, SOIL-1.567, SOIL-1.88
+BEAM, SOIL-1.568, SOIL-1.87
+BEAM, SOIL-1.569, SOIL-1.86
+BEAM, SOIL-1.570, SOIL-1.85
+BEAM, SOIL-1.14, SOIL-1.3
 *Nset, nset=M_SET-2, instance=FOOTING-1
  35,
 *Nset, nset=SET-5, instance=FOOTING-1
@@ -12430,30 +12435,41 @@ BEAM, SOIL-1.512, SOIL-1.143
  35,
 *Nset, nset=M_SET-2_CNS__CNS_, internal, instance=FOOTING-1
  35,
+*Nset, nset=M_SET-2_CNS__CNS__CNS_, internal, instance=FOOTING-1
+ 35,
 *Nset, nset=PIER-1_SET-3_CNS_, internal, instance=PIER-1
  12,
+*Nset, nset=PIER-1_SET-3_CNS__CNS_, internal, instance=PIER-1
+ 12,
 *Nset, nset=SET-5_CNS_, internal, instance=FOOTING-1
+ 35,
+*Nset, nset=SET-5_CNS__CNS_, internal, instance=FOOTING-1
  35,
 *Nset, nset=_PICKEDSET13, internal, instance=FOOTING-1
  35,
 *Nset, nset=_PICKEDSET17, internal, instance=FOOTING-1
  35,
-*Nset, nset=_PickedSet18, internal, instance=FOOTING-1
+*Nset, nset=_PICKEDSET18, internal, instance=FOOTING-1
  35,
-*Surface, type=NODE, name=SET-5_CNS__CNS_, internal
-SET-5_CNS_, 1.
-*Surface, type=NODE, name=PIER-1_SET-3_CNS__CNS_, internal
-PIER-1_SET-3_CNS_, 1.
-*Surface, type=NODE, name=M_SET-2_CNS__CNS__CNS_, internal
-M_SET-2_CNS__CNS_, 1.
-** Constraint: CONSTRAINT-3-1
-*Tie, name=CONSTRAINT-3-1, adjust=yes
-PIER-1_SET-3_CNS__CNS_, SET-5_CNS__CNS_
-** Constraint: P-RIGIDBODY-1-1
-*Tie, name=P-RIGIDBODY-1-1, adjust=yes, position tolerance=10.
-PIER-1.SURF-PIER, M_SET-2_CNS__CNS__CNS_
+*Nset, nset=_PickedSet21, internal, instance=FOOTING-1
+ 35,
+*Surface, type=NODE, name=SET-5_CNS__CNS__CNS_, internal
+SET-5_CNS__CNS_, 1.
+*Surface, type=NODE, name=PIER-1_SET-3_CNS__CNS__CNS_, internal
+PIER-1_SET-3_CNS__CNS_, 1.
+*Surface, type=NODE, name=M_SET-2_CNS__CNS__CNS__CNS_, internal
+M_SET-2_CNS__CNS__CNS_, 1.
+** Constraint: CONSTRAINT-3-1-1
+*Tie, name=CONSTRAINT-3-1-1, adjust=yes
+PIER-1_SET-3_CNS__CNS__CNS_, SET-5_CNS__CNS__CNS_
+** Constraint: CONSTRAINT-4-1
+*Tie, name=CONSTRAINT-4-1, adjust=yes, type=SURFACE TO SURFACE
+SOIL-1.SURF-S-F, FOOTING-1.SURF-FOOTINGBOT
+** Constraint: P-RIGIDBODY-1-1-1
+*Tie, name=P-RIGIDBODY-1-1-1, adjust=yes, position tolerance=10.
+PIER-1.SURF-PIER, M_SET-2_CNS__CNS__CNS__CNS_
 ** Constraint: RigidBody-1
-*Rigid Body, ref node=_PickedSet18, elset=FOOTING-1.FOOTING, position=CENTER OF MASS
+*Rigid Body, ref node=_PickedSet21, elset=FOOTING-1.FOOTING, position=CENTER OF MASS
 *End Assembly
 *Amplitude, name=EQ
              0.,          0.0072,           0.005,          0.0062,            0.01,          0.0046,           0.015,          0.0028
@@ -13110,12 +13126,6 @@ PIER-1.SURF-PIER, M_SET-2_CNS__CNS__CNS_
  0.9,
 *Surface Behavior, pressure-overclosure=EXPONENTIAL
 1e-05, 10.
-** 
-** INTERACTIONS
-** 
-** Interaction: NT_EXPO-1
-*Contact Pair, interaction=NT_EXPO, small sliding, type=SURFACE TO SURFACE, adjust=0.001
-SOIL-1.SURF-S-F, FOOTING-1.SURF-FOOTINGBOT
 ** ----------------------------------------------------------------
 ** 
 ** STEP: Gravity
@@ -13165,13 +13175,16 @@ SOIL-1.SET-1, GRAV, 9.81, 0., -1.
 *Step, name=Self_weight, nlgeom=NO, inc=100000
 Self_weight
 *Static
-0.01, 1., 1e-05, 0.01
+0.01, 10., 0.0001, 0.01
 ** 
 ** LOADS
 ** 
 ** Name: CFORCE-1   Type: Concentrated force
 *Cload, op=NEW
-SET-5, 2, -100.
+SET-5, 1, 20.
+** Name: CFORCE-2   Type: Concentrated force
+*Cload, op=NEW
+SET-5, 2, -10.
 ** 
 ** OUTPUT REQUESTS
 ** 
@@ -13187,24 +13200,23 @@ SET-5, 2, -100.
 *End Step
 ** ----------------------------------------------------------------
 ** 
-** STEP: Forces
+** STEP: Apply_forces
 ** 
-*Step, name=Forces, nlgeom=NO, inc=100000
-Applying forces on Mass
+*Step, name=Apply_forces, nlgeom=NO, inc=100000
+Forces on the nodes
 *Static
-0.01, 1., 1e-05, 0.01
+0.01, 10., 0.0001, 0.01
 ** 
 ** LOADS
 ** 
 ** Name: CFORCE-1   Type: Concentrated force
 *Cload, op=NEW
-SET-5, 2, -100.
 ** Name: CFORCE-2   Type: Concentrated force
 *Cload, op=NEW
-PIER-1.SET-3, 1, 40.
-** Name: CFORCE-3   Type: Concentrated force
+SET-5, 2, -10.
+** Name: CFORCE-4   Type: Concentrated force
 *Cload, op=NEW
-PIER-1.SET-3, 2, -100.
+PIER-1.SET-3, 1, 10.
 ** 
 ** OUTPUT REQUESTS
 ** 
