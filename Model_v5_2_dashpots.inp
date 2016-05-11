@@ -13720,7 +13720,7 @@ PIER-1.SURF-PIER, M_SET-2_CNS__CNS__CNS__CNS_
 *Surface Interaction, name=NT_EXPO
 1.,
 *Friction, slip tolerance=0.001, taumax=5.
- 0.9,
+ 0.5,
 *Surface Behavior, pressure-overclosure=EXPONENTIAL
 1e-05, 10.
 ** 
