@@ -20312,7 +20312,13 @@ SOIL-1.SOIL, GRAV, 9.81, 0., -1.
 ** 
 ** FIELD OUTPUT: F-Output-1
 ** 
-*Output, field, variable=PRESELECT
+*Output, field
+*Node Output
+CF, RF, U, V
+*Element Output, directions=YES
+LE, S
+*Contact Output
+CDISP, CSTRESS
 ** 
 ** HISTORY OUTPUT: H-Output-1
 ** 
@@ -20341,7 +20347,7 @@ Set-3, 2, -50.
 ** 
 *Output, field
 *Node Output
-CF, RF, U
+CF, RF, U, V
 *Element Output, directions=YES
 E, LE, PE, S, PEEQ
 *Contact Output
@@ -20388,7 +20394,7 @@ Set-3, 2, -50.
 ** 
 *Output, field, frequency=1
 *Node Output
-CF, RF, U
+A, CF, RF, U, V
 *Element Output, directions=YES
 E, LE, PE, S, PEEQ
 *Contact Output
